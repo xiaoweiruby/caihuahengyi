@@ -1,1 +1,2 @@
-张家琛 test
+添加了font-awesome-rails
+在welcome里面完成了首页的img和第二个栏目的图标思考；
