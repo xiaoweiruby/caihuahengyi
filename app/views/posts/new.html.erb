@@ -2,17 +2,25 @@
     <h2>新增文章</h2>
 
     <hr>
-    <%= form_for @post do |f| %>
+    <%= simple_form_for @post do |f| %>
+    <div class="group">
+      <%= f.input :image, as: :file %>
+    </div>
 
+    <br>
     标题
-    <%= f.text_field :title %>
-    <br>
+    <div class="group">
+      <%= f.input :title %>
+    </div>
     叙述
-    <br>
-    <%= f.text_area :body %>
-    <br>
+
+    <div class="group">
+      <%= f.input :body %>
+    </div>
+
 
     <%= f.submit "Submit", :disable_with => 'Submitting...' %>
     <% end %>
+
 
 </div>
