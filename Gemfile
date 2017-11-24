@@ -34,6 +34,7 @@ gem 'simple_form'
 
 gem 'carrierwave'
 gem 'mini_magick'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -42,7 +43,10 @@ gem 'mini_magick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'font-awesome-rails'
+gem 'pg'
 group :development, :test do
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
