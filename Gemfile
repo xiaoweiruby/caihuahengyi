@@ -43,6 +43,7 @@ gem 'mini_magick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'font-awesome-rails'
+gem 'ransack'
 gem 'pg'
 group :development, :test do
   gem 'capistrano-rails'
