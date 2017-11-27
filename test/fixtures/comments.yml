@@ -2,6 +2,8 @@
 
 one:
   body: MyText
+  post: one
 
 two:
   body: MyText
+  post: two
