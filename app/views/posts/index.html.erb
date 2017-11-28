@@ -4,6 +4,7 @@
       <tr>
         <td>序号</td>
         <td>书名</td>
+        <td>图片</td>
         <td>阅读笔记</td>
       </tr>
     </thead>
@@ -12,7 +13,16 @@
         <tr>
           <td>#</td>
           <td><%= link_to(post.title, post_path(post)) %></td>
+            <td>
+              <% if post.image.present? %>
+                <%= image_tag(post.image.medium.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            </td>
+
           <td><%= post.body %></td>
+
           <td>
               <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
