@@ -8,7 +8,14 @@
     <% end %>
 
     <h2><%= @post.title %></h2>
+    <% if current_user.vip? %>
     <p><%= @post.body %></p>
+    <% else %>
+    <p>请开通会员</p>
+    <% end %>
+
+
+
     <div class="post">
       <%= link_to("Edit", edit_post_path(@post), class: "btn btn-primary")%>
     </div>
