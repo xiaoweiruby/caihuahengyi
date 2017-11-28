@@ -1,0 +1,2 @@
+module Vip::PostsHelper
+end
