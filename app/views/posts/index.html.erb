@@ -1,13 +1,10 @@
 <div class="col-md-12">
-  <div class="post">
-    <%= link_to("New post", new_post_path, class: "btn btn-primary pull-right") %>
-  </div>
   <table class="table table-hover">
     <thead>
       <tr>
-        <td>#</td>
-        <td>Title</td>
-        <td>Description</td>
+        <td>序号</td>
+        <td>书名</td>
+        <td>阅读笔记</td>
       </tr>
     </thead>
     <tbody>
@@ -25,4 +22,9 @@
       <% end %>
     </tbody>
   </table>
+
+      <div class="post">
+        <%= link_to("新增书籍", new_post_path, class: "btn btn-default") %>
+      </div>
+
 </div>
