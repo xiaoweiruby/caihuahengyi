@@ -8,35 +8,26 @@
     <% end %>
 
     <h2><%= @post.title %></h2>
-    <% if current_user.vip? %>
-    <p><%= @post.body %></p>
+    <% if current_user&&current_user.vip? %>
+      <p><%= @post.body %></p>
+      <h4>评论精选</h4>
+        <% @post.comments.each do |comment| %>
+          <p>
+            <strong>我的评论:</strong>
+            <%= comment.body %>
+          </p>
+        <% end %>
+      <h6>我来说几句:</h6>
+      <%= form_for([@post, @post.comments.build]) do |f| %>
+        <p>
+          <%= f.text_area :body %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
     <% else %>
     <p>请开通会员</p>
     <% end %>
-
-
-
-    <div class="post">
-      <%= link_to("Edit", edit_post_path(@post), class: "btn btn-primary")%>
-    </div>
-
-    <h4>评论精选</h4>
-      <% @post.comments.each do |comment| %>
-        <p>
-          <strong>我的评论:</strong>
-          <%= comment.body %>
-        </p>
-      <% end %>
-    <h6>我来说几句:</h6>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-
-  <p>
-
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 
   </div>
