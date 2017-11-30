@@ -6,9 +6,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :posts
   end
-  namespace :vip do
-    resources :products
-  end
+  
 
   root "welcome#index"
 
