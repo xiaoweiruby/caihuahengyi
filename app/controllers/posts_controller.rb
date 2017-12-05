@@ -36,8 +36,16 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path
   end
+  def add_to_cart
+     @post = Post.find(params[:id])
+     current_cart.add_post_to_cart(@post)
+     flash[:notice] = "成功加入购物车"
+     redirect_to :back
+
+  end
   private
   def post_params
     params.require(:post).permit(:title, :body, :image)
   end
+
 end

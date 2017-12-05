@@ -13,6 +13,8 @@
         <tr>
           <td>#</td>
           <td><%= link_to(post.title, post_path(post)) %></td>
+
+
             <td>
               <% if post.image.present? %>
                 <%= image_tag(post.image.medium.url, class: "thumbnail") %>
@@ -24,6 +26,7 @@
           <td><%= post.body %></td>
 
           <td>
+            <%= link_to("加入购物车", add_to_cart_post_path(post), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
               <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" } )%>
