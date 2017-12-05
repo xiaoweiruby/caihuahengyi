@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :carts
   resources :posts do
     resources :comments
     member do
