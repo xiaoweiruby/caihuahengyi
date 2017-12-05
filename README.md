@@ -129,8 +129,11 @@ C：如果另一个想要完成代码的上传，需要先完成git pull到本�
 
 **查阅技术文档：移动化支付** 肖威
 - 完成gitbook本地+线上操作 ✓
-Ruby学习文档：http://web.siwei.me
+- Ruby学习文档：
+- http://web.siwei.me
 - 完成集成支付ping++公司申请 ✓
-技术文档：https://dashboard.pingxx.com/download/resource/user-guide-v1.pdf
+- 技术文档：
+- https://dashboard.pingxx.com/download/resource/user-guide-v1.pdf
 - 查看远端阿里云docket镜像部署
-文献资料：https://mp.weixin.qq.com/s?src=11&timestamp=1512468198&ver=556&signature=ewjbrPo6HusXbYjul2VsIdc4Mq8NblVZFO6OB5A1xYGjCagmZzgtr2p5-Pf3NLdDTeD6ZFnqZavPdGbsUiMmuy5kFwaYp68o8ulZWnNaxAEDdBVxA08em8R5373wGvfY&new=1
+- 文献资料：
+- https://mp.weixin.qq.com/s?src=11&timestamp=1512468198&ver=556&signature=ewjbrPo6HusXbYjul2VsIdc4Mq8NblVZFO6OB5A1xYGjCagmZzgtr2p5-Pf3NLdDTeD6ZFnqZavPdGbsUiMmuy5kFwaYp68o8ulZWnNaxAEDdBVxA08em8R5373wGvfY&new=1
