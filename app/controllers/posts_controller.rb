@@ -40,4 +40,10 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body, :image)
   end
+
+  def add_to_cart
+     @product = Product.find(params[:id])
+     redirect_to :back
+     flash[:notice] = "测试加入购物车"
+  end
 end
