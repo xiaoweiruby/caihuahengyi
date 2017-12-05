@@ -4,7 +4,12 @@
             <a class="navbar-brand" href="/"><i class="fa fa-empire fa-fw"></i>首页 </a>
             <div class="btn-group dropup">
               <ul class="nav navbar-nav navbar-right">
-                  <li>
+                    <li>
+                        <%= link_to "#" do  %>
+                           购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.posts.count %> )
+                        <% end %>
+                    </li>
+                    <li>
                     <% if !current_user %>
                     <li><%= link_to("注册", new_user_registration_path) %> </li>
                     <li><%= link_to("登入", new_user_session_path) %></li>

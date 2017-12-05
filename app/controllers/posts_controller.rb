@@ -39,8 +39,9 @@ class PostsController < ApplicationController
   def add_to_cart
      @post = Post.find(params[:id])
      current_cart.add_post_to_cart(@post)
+     flash[:notice] = "成功加入购物车"
      redirect_to :back
-     flash[:notice] = "测试加入购物车"
+
   end
   private
   def post_params
