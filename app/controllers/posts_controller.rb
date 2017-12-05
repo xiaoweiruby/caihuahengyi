@@ -38,6 +38,7 @@ class PostsController < ApplicationController
   end
   def add_to_cart
      @post = Post.find(params[:id])
+     current_cart.add_post_to_cart(@post)
      redirect_to :back
      flash[:notice] = "测试加入购物车"
   end
