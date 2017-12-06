@@ -26,7 +26,11 @@
           <td><%= post.body %></td>
 
           <td>
+            <% if post.quantity > 0 %>
             <%= link_to("加入购物车", add_to_cart_post_path(post), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+            <% else %>
+              已销售一空，无法购买
+            <% end %>
               <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" } )%>
