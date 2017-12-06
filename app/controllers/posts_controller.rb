@@ -38,8 +38,12 @@ class PostsController < ApplicationController
   end
   def add_to_cart
      @post = Post.find(params[:id])
+     if !current_cart.posts.include?(@post)
      current_cart.add_post_to_cart(@post)
-     flash[:notice] = "成功加入购物车"
+     flash[:notice] = "你已成功将 #{@post.title} 加入购物车"
+     else
+        flash[:warning] = "你的购物车内已有此物品"
+     end
      redirect_to :back
 
   end

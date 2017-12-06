@@ -137,3 +137,15 @@ C：如果另一个想要完成代码的上传，需要先完成git pull到本�
 - 查看远端阿里云docket镜像部署
 - 文献资料：
 - https://mp.weixin.qq.com/s?src=11&timestamp=1512468198&ver=556&signature=ewjbrPo6HusXbYjul2VsIdc4Mq8NblVZFO6OB5A1xYGjCagmZzgtr2p5-Pf3NLdDTeD6ZFnqZavPdGbsUiMmuy5kFwaYp68o8ulZWnNaxAEDdBVxA08em8R5373wGvfY&new=1
+
+# 2017年12月06日
+**添加购物车功能** 张家琛
+- 找到商品 ✓
+- 加到购物车 ✓
+- 生成购物明细 ✓
+- 一键清空购物车 ✓
+- 删除购物车内某一商品 ✓
+- 已经加入购物车的商品，不能重复被加入✓
+- 可以更改购物车内购买的商品数量✓
+- 库存为 0 的商品不能购买✓
+- 在购物车新增数量时，不能更新超过原有库存的数量✓
