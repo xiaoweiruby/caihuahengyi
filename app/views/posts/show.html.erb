@@ -8,8 +8,9 @@
 
     <h2><%= @post.information %></h2>
     <% if current_user && current_user.vip? %>
-
+    <p><%= @post.information %></p>
     <p><%= @post.body %></p>
+
       <h4>评论精选</h4>
       <% @post.comments.each do |comment| %>
         <p>
