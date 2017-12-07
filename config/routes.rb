@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :cart_items
+  resources :cart_items, :orders
+  
   resources :carts do
      collection do
        delete :clean
+       post :checkout
      end
   end
   resources :posts do

@@ -17,7 +17,6 @@
         </tr>
       </thead>
       <tbody>
-
         <% current_cart.cart_items.each do |cart_item| %>
           <tr>
             <td>
@@ -48,7 +47,6 @@
             </td>
           </tr>
         <% end %>
-
       </tbody>
     </table>
 
@@ -64,7 +62,7 @@
     <hr>
 
     <div class="checkout clearfix">
-      <%= link_to("确认结账", "#", method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
     </div>
   </div>
 </div>

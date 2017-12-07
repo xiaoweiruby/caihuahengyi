@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206072749) do
+ActiveRecord::Schema.define(version: 20171207081907) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -33,14 +33,26 @@ ActiveRecord::Schema.define(version: 20171206072749) do
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.integer  "total",            default: 0
+    t.integer  "user_id"
+    t.string   "billing_name"
+    t.string   "billing_address"
+    t.string   "shipping_name"
+    t.string   "shipping_address"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
+    t.text     "information"
     t.text     "body"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "image"
     t.integer  "price"
-    t.integer  "quantity",   default: 1
+    t.integer  "quantity",    default: 100
+    t.string   "title"
   end
 
   create_table "users", force: :cascade do |t|
