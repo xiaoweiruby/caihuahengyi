@@ -6,7 +6,7 @@
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
 
-    <h2><%= @post.title %></h2>
+    <h2><%= @post.information %></h2>
     <% if current_user && current_user.vip? %>
 
     <p><%= @post.body %></p>
