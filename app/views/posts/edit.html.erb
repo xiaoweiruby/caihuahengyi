@@ -14,16 +14,14 @@
       <%= f.input :image, as: :file %>
     </div>
 
-    <%= f.input :title, :label => "标题" %>
+    <%= f.input :information, :label => "产品介绍" %>
     <br>
-
-    <%= f.input :body, :label => "叙述" %>
+    <%= f.input :body, :label => "产品内容" %>
     <br>
-
     <%= f.input :price, :label => "价钱" %>
-
+    <br>
     <%= f.input :quantity, :label => "数量" %>
-
+    <br>
     <%= f.submit "修改", :disable_with => 'Submitting...' %>
     <% end %>
 

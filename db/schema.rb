@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 20171206072749) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
+    t.text     "information"
     t.text     "body"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "image"
     t.integer  "price"
-    t.integer  "quantity",   default: 1
+    t.integer  "quantity",    default: 100
   end
 
   create_table "users", force: :cascade do |t|
