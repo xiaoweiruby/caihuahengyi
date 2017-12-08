@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
 
      if @order.save
        current_cart.cart_items.each do |cart_item|
-         post_list = postList.new
+         post_list = PostList.new
          post_list.order = @order
          post_list.post_name = cart_item.post.title
          post_list.post_price = cart_item.post.price
