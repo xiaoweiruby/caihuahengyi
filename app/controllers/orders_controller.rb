@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
 
+
      def create
        @order = Order.new(order_params)
        @order.user = current_user
@@ -16,14 +17,14 @@ class OrdersController < ApplicationController
            post_list.quantity = cart_item.quantity
            post_list.save
          end
-         redirect_to order_path(@order)
+         redirect_to order_path(@order.token)
        else
          render 'carts/checkout'
        end
-     end
+     ends
 
      def show
-       @order = Order.find(params[:id])
+       @order = Order.find_by_token(params[:id])
        @post_lists = @order.post_lists
      end
 
