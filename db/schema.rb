@@ -46,11 +46,11 @@ ActiveRecord::Schema.define(version: 20171208025141) do
 
   create_table "post_lists", force: :cascade do |t|
     t.integer  "order_id"
-    t.string   "product_name"
-    t.integer  "product_price"
+    t.string   "post_name"
+    t.integer  "post_price"
     t.integer  "quantity"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
