@@ -10,4 +10,5 @@ class User < ApplicationRecord
   def vip?
     is_vip
   end
+  
 end
