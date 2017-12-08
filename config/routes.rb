@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :cart_items, :orders
-  
+
   resources :carts do
      collection do
        delete :clean
@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   end
   namespace :admin do
     resources :posts
+  end
+  namespace :account do
+    resources :orders
   end
 
 
