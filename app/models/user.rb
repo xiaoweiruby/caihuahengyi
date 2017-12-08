@@ -10,5 +10,5 @@ class User < ApplicationRecord
   def vip?
     is_vip
   end
-  
+  has_many :orders
 end
