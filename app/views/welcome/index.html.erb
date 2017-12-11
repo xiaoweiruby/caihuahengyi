@@ -1,91 +1,179 @@
-<!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>首页</title>
-      </head>
+<div class="welcome-box">
+      <!--===== 广告轮播 =====-->
+    <section class="intro-box">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="intro" class="carousel slide" data-ride="carousel">
+            <!--===== 轮播按钮 =====-->
+            <ol class="carousel-indicators">
+              <li data-target="#intro" data-slide-to="0" class="active"></li>
+              <li data-target="#intro" data-slide-to="1"></li>
+              <li data-target="#intro" data-slide-to="2"></li>
+            </ol>
 
-      <body>
-
-
-
-    <div class="header">
-        <div class="input-group margin-bottom-sm">
-        <span class="input-group-addon"><i class="fa fa-search fa-fw"></i></span>
-        <input class="form-control" type="text" placeholder="欢迎来到才华横溢的世界">
-        </div>
-
-
-      <div id="myCarousel" class="carousel slide">
-    <!-- 轮播（Carousel）指标 -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src="https://ws2.sinaimg.cn/large/006tKfTcly1flqn3soe38j30p00dv0vx.jpg" alt="First slide">
-        </div>
-        <div class="item">
-            <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3npvhlj30hs09wt9e.jpg" alt="Second slide">
-        </div>
-        <div class="item">
-            <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3cdd2lj30m80ccaam.jpg" alt="Third slide">
-        </div>
-    </div>
-    <!-- 轮播（Carousel）导航 -->
-    <a class="carousel-control left" href="#myCarousel"
-        data-slide="prev">&lsaquo;
-    </a>
-    <a class="carousel-control right" href="#myCarousel"
-        data-slide="next">&rsaquo;
-    </a>
-</div>
-            <!--   <img src="https://ws2.sinaimg.cn/large/006tKfTcly1flqn3soe38j30p00dv0vx.jpg" alt="" width="750" height="425" > -->
-            <!--  <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3npvhlj30hs09wt9e.jpg" alt="" width="750" height="425" > -->
-            <!--  <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3cdd2lj30m80ccaam.jpg" alt="" width="750" height="425" > -->
-
-
-          <!--  <div class="container">
-                      <div class="study">
-                          <div class="person-box weith:50px height:50px">
-                            <a href="#"><i class="fa fa-university fa-5x"></i></a>
-                          <br>学习
-                        </div>
-                     </div>
-
-
-                      <div class="answer">
-                         <div class="person-box">
-                             <a href="#"><i class="fa fa-bell fa-5x"></i></a>
-                          <br>问答
-                        </div>
-                     </div>
-
-
-                     <div class="job">
-                         <div class="person-box">
-                            <a href="#"><i class="fa fa-briefcase fa-5x"></i></a>
-                              <br>就业
-                        </div>
-                    </div>
-
-
-                   <div class="activity">
-                       <div class="person-box">
-                          <a href="#"><i class="fa fa-modx fa-5x"></i></a>
-                            <br>活动
-                      </div>
+            <!--===== 轮播内容 =====-->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
+                  <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
+                  <div class="carousel-caption">
+                    <h3>願景</h3> <!-- 标题 -->
+                    <p>Chase the Vision, not the money. The money will end up following you.</p> <!-- 内文 -->
                   </div>
-                    </div>
+                <% end %>
+              </div>
+              <div class="item">
+                <%= link_to '#', target: "_blank" do %>
+                  <%= image_tag("intro_2.jpg") %>
+                  <div class="carousel-caption">
+                    <h3>动机</h3>
+                    <p>Motivation will beat mere talent almost every time.</p>
+                  </div>
+                <% end %>
+              </div>
+              <div class="item">
+                <%= link_to '#', target: "_blank" do %>
+                  <%= image_tag("intro_3.jpg") %>
+                  <div class="carousel-caption">
+                    <h3>坚持</h3>
+                    <p>When I thought I could't go on, I forced myself to keep going .</p>
+                  </div>
+                <% end %>
+              </div>
+            </div>
 
-                  -->
+            <!--===== 换页按钮 =====-->
+            <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
+              <span class="fa fa-angle-left" aria-hidden="true"></span> <!-- 左侧按钮图示 -->
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#intro" role="button" data-slide="next">
+              <span class="fa fa-angle-right" aria-hidden="true"></span> <!-- 右侧按钮图示 -->
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--===== 推荐商品 =====-->
+<section class="show-box">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>推荐课程</h2> <!-- 副标题 -->
+      <div class="short-line"></div> <!-- 分隔线 -->
+      <div class="row">
+        <div class="col-md-3">
+          <%= link_to '#' do %> <!-- 商品连结 -->
+            <div class="box"><%= image_tag("item_1.jpg") %></div> <!-- 商品图片 -->
+            <div class="content">
+              <p>程序职业小白书</p> <!-- 商品名称 -->
+              <p>$650</p> <!-- 商品价格 -->
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_2.jpg") %></div>
+            <div class="content">
+              <p>数字货币与区块链原理</p>
+              <p>$750</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_3.jpg") %></div>
+            <div class="content">
+              <p>Git原理详解及实用指南</p>
+              <p>$450</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_4.jpg") %></div>
+            <div class="content">
+              <p>如何使用Canvas制作出酷炫的网页背景特效</p>
+              <p>$250</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_5.jpg") %></div>
+            <div class="content">
+              <p>响应式编程———RxJava</p>
+              <p>$150</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_6.jpg") %></div>
+            <div class="content">
+              <p>用 npm script 打造超溜的前端工作流</p>
+              <p>$80</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_7.jpg") %></div>
+            <div class="content">
+              <p>商城首屏优化</p>
+              <p>$125</p>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3">
+          <%= link_to '#' do %>
+            <div class="box"><%= image_tag("item_8.jpg") %></div>
+            <div class="content">
+              <p>javascript常用实例的实现与封装</p>
+              <p>$20</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
 
 
 
-  <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div>
       <h3>互动</h3>
       <p><em>We love caihuahengyi!</em></p>
       <br>
@@ -107,42 +195,4 @@
             <a href="/posts"><img src="https://ww4.sinaimg.cn/large/006tKfTcly1fm4jvhmsowj30eg09maaj.jpg"  class="img-circle person"  width="255" height="255"></a>
         </div>
       </div>
-  </div>
-
-
-
-
-          <div class="read">
-            <div class="person-box">
-              <i class="fa fa-book">每日读书</i>
-              <i class="fa fa-fighter-jet"></i><%= link_to '查看全部', posts_path%>
-              <div style="height:2px;weith:750px;border-bottom:1px #ccc solid;"></div>
-            </br> <img src="https://ws1.sinaimg.cn/large/006tNc79ly1flwpskl5b9j30cq0hathl.jpg" alt="" width="175" height="200">
-
-              <!--  <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3cdd2lj30m80ccaam.jpg" alt="" width="750" height="425" > -->
-          </div>
-
-          <div class="classroom">
-            <div class="person-box">
-              <i class="fa fa-ship"></i><%= link_to '每日课程', posts_path%>
-              <div style="height:2px;weith:750px;border-bottom:1px #ccc solid;"></div>
-            </br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1flwpqospy4j30sk0g2nlo.jpg" alt="" width="450" height="250">
-              <!--  <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3cdd2lj30m80ccaam.jpg" alt="" width="750" height="425" > -->
-          </div>
-
-          <div class="people">
-            <div class="person-box">
-              <i class="fa fa-legal"></i><%= link_to '每日人物', posts_path%>
-              <div style="height:2px;weith:750px;border-bottom:1px #ccc solid;"></div>
-            </br><img src="https://ws4.sinaimg.cn/large/006tNc79ly1flwpst3ntej30rc0eu7n0.jpg" alt="" width="450" height="225">
-
-              <!--  <img src="https://ws1.sinaimg.cn/large/006tKfTcly1flqn3cdd2lj30m80ccaam.jpg" alt="" width="750" height="425" > -->
-          </div>
-
-          <!-- /.header -->
-       </div>
-
-
-      </body>
-
-    </html>
+  </div> -->

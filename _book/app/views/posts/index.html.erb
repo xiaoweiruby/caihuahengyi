@@ -1,0 +1,43 @@
+<div class="col-md-12">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>序号</td>
+        <td>书名</td>
+        <td>图片</td>
+        <td>阅读笔记</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td>#</td>
+          <td><%= link_to(post.title, post_path(post)) %></td>
+
+
+            <td>
+              <% if post.image.present? %>
+                <%= image_tag(post.image.medium.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail") %>
+              <% end %>
+            </td>
+
+          <td><%= post.body %></td>
+
+          <td>
+            <%= link_to("加入购物车", add_to_cart_post_path(post), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+              <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
+              <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+      <div class="post">
+        <%= link_to("新增书籍", new_post_path, class: "btn btn-default") %>
+      </div>
+
+</div>
