@@ -11,16 +11,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @postlists.each do |postlist| %>
+      <% @post.postlists.each do |postlist| %>
         <tr>
           <td>#</td>
-          <td><%= link_to(postlist.title, post_postlist_path(postlist)) %></td>
+          <td><%= link_to(postlist.title, "#") %></td>
           <td><%= postlist.body %></td>
-          <td>
-              <%= link_to("Edit", edit_post_postlist(postlist), class: "btn btn-sm btn-default")%>
-              <%= link_to("Delete", post_postlist(postlist),    class: "btn btn-sm btn-default",
-                          method: :delete, data: { confirm: "Are you sure?" } )%>
-          </td>
+
         </tr>
       <% end %>
     </tbody>
