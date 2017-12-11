@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="postlist">
-    <%= link_to("New postlist", new_postlist_path, class: "btn btn-primary pull-right") %>
+    <%= link_to("New postlist", new_post_postlist_path, class: "btn btn-primary pull-right") %>
   </div>
   <table class="table table-hover">
     <thead>
@@ -14,11 +14,11 @@
       <% @postlists.each do |postlist| %>
         <tr>
           <td>#</td>
-          <td><%= link_to(postlist.title, postlist_path(postlist)) %></td>
-          <td><%= postlist.description %></td>
+          <td><%= link_to(postlist.title, post_postlist_path(postlist)) %></td>
+          <td><%= postlist.body %></td>
           <td>
-              <%= link_to("Edit", edit_postlist_path(postlist), class: "btn btn-sm btn-default")%>
-              <%= link_to("Delete", postlist_path(postlist),    class: "btn btn-sm btn-default", 
+              <%= link_to("Edit", edit_post_postlist(postlist), class: "btn btn-sm btn-default")%>
+              <%= link_to("Delete", post_postlist(postlist),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" } )%>
           </td>
         </tr>

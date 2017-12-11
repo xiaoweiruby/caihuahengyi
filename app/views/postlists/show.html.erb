@@ -1,0 +1,17 @@
+  <table class="table">
+     <thead>
+      <tr>
+         <th>文章内容</th>
+         <th>发表者</th>
+         <th>发表时间</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @postlists.each do |postlist| %>
+         <tr>
+           <td><%= postlist.title %></td>
+           <td><%= postlist.body %></td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>
