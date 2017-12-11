@@ -15,7 +15,7 @@ class PostlistsController < ApplicationController
     @postlist.post = @post
     @postlist.user = current_user
     if @postlist.save
-      redirect_to post_postlists_path(@post)
+      redirect_to post_postlist_path(@post)
     else
       render :new
     end
