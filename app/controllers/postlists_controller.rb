@@ -1,6 +1,8 @@
 class PostlistsController < ApplicationController
   def index
+    @post = Post.find(params[:post_id])
     @postlists = Postlist.all
+
   end
   def new
     @post = Post.find(params[:post_id])
@@ -21,8 +23,9 @@ class PostlistsController < ApplicationController
   end
   def show
     @post = Post.find(params[:post_id])
-    @postlist = @post.postlist
+    @postlists = @post.postlists
   end
+
 
 
 
