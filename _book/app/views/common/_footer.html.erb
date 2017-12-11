@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default " role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-empire fa-fw"></i>首页 </a>
+            <div class="btn-group dropup">
+              <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <%= link_to "#" do  %>
+                           购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.posts.count %> )
+                        <% end %>
+                    </li>
+                    <li>
+                    <% if !current_user %>
+                    <li><%= link_to("注册", new_user_registration_path) %> </li>
+                    <li><%= link_to("登入", new_user_session_path) %></li>
+                  <% else %>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          Hi!, <%= current_user.email %>
+                          <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <% if current_user.admin? %>
+                          <li> <%= link_to("Admin Panel", admin_posts_path) %> </li>
+                          <% end %>
+                          <% if !current_user.vip? %>
+                          <li> <%= link_to("购买会员", "#" ) %> </li>
+                          <% end %>
+                          <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
+                      </ul>
+                    </li>
+                  <% end %>
+                  </li>
+              </ul>
+            </div>
+        </div>
+
+      </div>
+
+  </nav>
