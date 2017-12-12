@@ -1,147 +1,169 @@
-<div class="welcome-box">
-      <!--===== 广告轮播 =====-->
-    <section class="intro-box">
-      <div class="row">
-        <div class="col-md-12">
-          <div id="intro" class="carousel slide" data-ride="carousel">
-            <!--===== 轮播按钮 =====-->
-            <ol class="carousel-indicators">
-              <li data-target="#intro" data-slide-to="0" class="active"></li>
-              <li data-target="#intro" data-slide-to="1"></li>
-              <li data-target="#intro" data-slide-to="2"></li>
-            </ol>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>才华横溢-caihuahengyi.cn - 一个帮助学生和企业对接的知识服务平台</title>
+    <meta name="baidu-site-verification" content="ti2u0GJ9rl" />
+    <meta name="keywords" content="才华横溢 终身学习 求职就业 线下活动" />
+    <meta name="description" content="才华横溢是目前全球最懂学生学习的知识服务平台,提供学习、求职、融资、活动、问答等知识学习服务,帮助学生和企业精准对接。" />
+    <meta http-equiv="Window-target" content="_top" />
+    <!--===== 首页图标  <link rel=”shortcut icon” type=”image/x-icon” href="http://....../favicon.ico" /> =====-->
+  </head>
 
-            <!--===== 轮播内容 =====-->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
-                  <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
-                  <div class="carousel-caption">
-                    <!-- <h3>願景</h3> <!-- 标题 -->
-                    <!-- <p>Chase the Vision, not the money. The money will end up following you.</p> <!-- 内文 --> 
+  <body>
+    <div class="welcome-box">
+          <!--===== 广告轮播 =====-->
+        <section class="intro-box">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="intro" class="carousel slide" data-ride="carousel">
+                <!--===== 轮播按钮 =====-->
+                <ol class="carousel-indicators">
+                  <li data-target="#intro" data-slide-to="0" class="active"></li>
+                  <li data-target="#intro" data-slide-to="1"></li>
+                  <li data-target="#intro" data-slide-to="2"></li>
+                </ol>
+
+                <!--===== 轮播内容 =====-->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
+                      <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
+                      <div class="carousel-caption">
+                        <!-- <h3>願景</h3> <!-- 标题 -->
+                        <!-- <p>Chase the Vision, not the money. The money will end up following you.</p> <!-- 内文 -->
+                      </div>
+                    <% end %>
                   </div>
-                <% end %>
-              </div>
-              <div class="item">
-                <%= link_to '#', target: "_blank" do %>
-                  <%= image_tag("intro_2.jpg") %>
-                  <div class="carousel-caption">
-                    <h3>动机</h3>
-                    <p>Motivation will beat mere talent almost every time.</p>
+                  <div class="item">
+                    <%= link_to '#', target: "_blank" do %>
+                      <%= image_tag("intro_2.jpg") %>
+                      <div class="carousel-caption">
+                        <h3>动机</h3>
+                        <p>Motivation will beat mere talent almost every time.</p>
+                      </div>
+                    <% end %>
                   </div>
-                <% end %>
-              </div>
-              <div class="item">
-                <%= link_to '#', target: "_blank" do %>
-                  <%= image_tag("intro_3.jpg") %>
-                  <div class="carousel-caption">
-                    <h3>坚持</h3>
-                    <p>When I thought I could't go on, I forced myself to keep going .</p>
+                  <div class="item">
+                    <%= link_to '#', target: "_blank" do %>
+                      <%= image_tag("intro_3.jpg") %>
+                      <div class="carousel-caption">
+                        <h3>坚持</h3>
+                        <p>When I thought I could't go on, I forced myself to keep going .</p>
+                      </div>
+                    <% end %>
                   </div>
-                <% end %>
+                </div>
+
+                <!--===== 换页按钮 =====-->
+                <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
+                  <span class="fa fa-angle-left" aria-hidden="true"></span> <!-- 左侧按钮图示 -->
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#intro" role="button" data-slide="next">
+                  <span class="fa fa-angle-right" aria-hidden="true"></span> <!-- 右侧按钮图示 -->
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
             </div>
+          </div>
+        </section>
 
-            <!--===== 换页按钮 =====-->
-            <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
-              <span class="fa fa-angle-left" aria-hidden="true"></span> <!-- 左侧按钮图示 -->
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#intro" role="button" data-slide="next">
-              <span class="fa fa-angle-right" aria-hidden="true"></span> <!-- 右侧按钮图示 -->
-              <span class="sr-only">Next</span>
-            </a>
+
+        <!--===== 推荐商品 =====-->
+    <section class="show-box">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>推荐课程</h2> <!-- 副标题 -->
+          <div class="short-line"></div> <!-- 分隔线 -->
+          <div class="row">
+            <div class="col-md-3">
+              <%= link_to '#' do %> <!-- 商品连结 -->
+                <div class="box"><%= image_tag("item_1.jpg") %></div> <!-- 商品图片 -->
+                <div class="content">
+                  <p>程序职业小白书</p> <!-- 商品名称 -->
+                  <p>$650</p> <!-- 商品价格 -->
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_2.jpg") %></div>
+                <div class="content">
+                  <p>数字货币与区块链原理</p>
+                  <p>$750</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_3.jpg") %></div>
+                <div class="content">
+                  <p>Git原理详解及实用指南</p>
+                  <p>$450</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_4.jpg") %></div>
+                <div class="content">
+                  <p>如何使用Canvas制作出酷炫的网页背景特效</p>
+                  <p>$250</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_5.jpg") %></div>
+                <div class="content">
+                  <p>响应式编程———RxJava</p>
+                  <p>$150</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_6.jpg") %></div>
+                <div class="content">
+                  <p>用 npm script 打造超溜的前端工作流</p>
+                  <p>$80</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_7.jpg") %></div>
+                <div class="content">
+                  <p>商城首屏优化</p>
+                  <p>$125</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-3">
+              <%= link_to '#' do %>
+                <div class="box"><%= image_tag("item_8.jpg") %></div>
+                <div class="content">
+                  <p>javascript常用实例的实现与封装</p>
+                  <p>$20</p>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!--===== 推荐商品 =====-->
-<section class="show-box">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <h2>推荐课程</h2> <!-- 副标题 -->
-      <div class="short-line"></div> <!-- 分隔线 -->
-      <div class="row">
-        <div class="col-md-3">
-          <%= link_to '#' do %> <!-- 商品连结 -->
-            <div class="box"><%= image_tag("item_1.jpg") %></div> <!-- 商品图片 -->
-            <div class="content">
-              <p>程序职业小白书</p> <!-- 商品名称 -->
-              <p>$650</p> <!-- 商品价格 -->
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_2.jpg") %></div>
-            <div class="content">
-              <p>数字货币与区块链原理</p>
-              <p>$750</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_3.jpg") %></div>
-            <div class="content">
-              <p>Git原理详解及实用指南</p>
-              <p>$450</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_4.jpg") %></div>
-            <div class="content">
-              <p>如何使用Canvas制作出酷炫的网页背景特效</p>
-              <p>$250</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_5.jpg") %></div>
-            <div class="content">
-              <p>响应式编程———RxJava</p>
-              <p>$150</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_6.jpg") %></div>
-            <div class="content">
-              <p>用 npm script 打造超溜的前端工作流</p>
-              <p>$80</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_7.jpg") %></div>
-            <div class="content">
-              <p>商城首屏优化</p>
-              <p>$125</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to '#' do %>
-            <div class="box"><%= image_tag("item_8.jpg") %></div>
-            <div class="content">
-              <p>javascript常用实例的实现与封装</p>
-              <p>$20</p>
-            </div>
-          <% end %>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+  </body>
+</html>
 
-</div>
+
+
+
+
+
+
 
 
 
