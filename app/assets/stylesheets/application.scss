@@ -172,36 +172,6 @@
   }
 }
 
-/*===== Intro 首页-广告轮播 =====*/
-.intro-box {
-  /*===== 轮播内容 =====*/
-  .item {
-    /* 标题 */
-    h3 {
-      margin-top: -40%; //标题高度
-      font-size: 50px; //文字大小
-      letter-spacing: 5px; //文字间距
-    }
-
-    /* 内文 */
-    p {
-      font-size: 20px;
-    }
-
-    /* 图片 */
-    img {
-      width: 100%;
-    }
-  }
-
-  /*===== 换页按钮 =====*/
-  .carousel-control {
-    span {
-      margin-top: 145%; //按钮高度
-      font-size: 50px; //按钮大小
-    }
-  }
-}
 
 /*===== Show 首页-推荐商品 =====*/
 .show-box {
@@ -525,4 +495,23 @@
       }
     }
   }
+}
+
+
+// .logo {
+//   float: left; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
+//   margin-right: 180px; /*加点右边距，和search模块拉开距离*/
+// }
+//
+// .logo a {
+//   font-size: 36px; /*设置字体36px*/
+//   color: #C81623; /*红色*/
+//   text-decoration: none; /*不要下划线*/
+// }
+
+.navbar-brand > img {
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 32px; //定制图片宽度
+    height: 32px; //定制图片高度
 }

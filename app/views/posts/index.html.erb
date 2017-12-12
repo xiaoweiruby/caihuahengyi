@@ -1,221 +1,57 @@
-<div class="conent-box">
-  <div class="container">
-    <!--===== 广告图 =====-->
-    <section class="intro-box">
-      <div class="row">
+<main data-v-3f216172="" class="container main-container">
+  <div data-v-5132bae5="" data-v-3f216172="" class="books-index-view">
+    <div data-v-5132bae5="" data-v-3f216172="" class="books-solgan">
+    </div>
+    <div data-v-5132bae5="" data-v-3f216172="" class="list-wrap">
+      <div data-v-5132bae5="" data-v-3f216172="" class="books-list">
         <div class="col-md-12">
-          <%= image_tag("posts_index_intro.jpg") %><!-- 图片位置 -->
-        </div>
-      </div>
-    </section>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <td>序号</td>
+                <td>书名</td>
+                <td>图片</td>
+                <td>阅读笔记</td>
+              </tr>
+            </thead>
+            <tbody>
+              <% @posts.each do |post| %>
+              <tr>
+                <td>#</td>
+                <td><%= link_to(post.title, post_path(post)) %></td>
 
-<div class="col-md-12">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <td>序号</td>
-        <td>书名</td>
-        <td>图片</td>
-        <td>阅读笔记</td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @posts.each do |post| %>
-        <tr>
-          <td>#</td>
-          <td><%= link_to(post.title, post_path(post)) %></td>
+                <td>
+                  <% if post.image.present? %>
+                  <%= image_tag(post.image.medium.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail") %>
+                  <% end %>
+                </td>
 
+                <td><%= post.body %></td>
 
-            <td>
-              <% if post.image.present? %>
-                <%= image_tag(post.image.medium.url, class: "thumbnail") %>
-              <% else %>
-                <%= image_tag("http://placehold.it/100x100&text=No Pic", class: "thumbnail") %>
+                <td>
+                  <% if post.quantity > 0 %>
+                  <%= link_to("加入购物车", add_to_cart_post_path(post), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+                <% else %>
+                  已销售一空，无法购买
+                  <% end %>
+                  <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
+                  <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
+                                  method: :delete, data: { confirm: "Are you sure?" } )%>
+                </td>
+              </tr>
               <% end %>
-            </td>
+            </tbody>
+          </table>
 
-          <td><%= post.body %></td>
+          <div class="post">
+            <%= link_to("新增书籍", new_post_path, class: "btn btn-default") %>
+          </div>
 
-          <td>
-            <% if post.quantity > 0 %>
-            <%= link_to("加入购物车", add_to_cart_post_path(post), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
-            <% else %>
-              已销售一空，无法购买
-            <% end %>
-              <%= link_to("Edit", edit_post_path(post), class: "btn btn-sm btn-default")%>
-              <%= link_to("Delete", post_path(post),    class: "btn btn-sm btn-default",
-                          method: :delete, data: { confirm: "Are you sure?" } )%>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-      <div class="post">
-        <%= link_to("新增书籍", new_post_path, class: "btn btn-default") %>
-      </div>
-
-</div>
-
-    <!--===== 商品类型 & 品牌选单 =====-->
-    <!-- <section class="menu-box">
-      <!-- 主要类型 -->
-      <!-- <div class="row">
-        <div class="dropdown btn-group clearfix">
-          <!-- 选单按钮 -->
-          <!-- <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-          类型一 <i class="fa fa-angle-down"></i>
-          </button>
-          <!-- 选单内容：分类 -->
-          <!-- <ul class="dropdown-menu">
-            <li><a href="#">分类</a></li>
-            <li><a href="#">分类</a></li>
-            <li><a href="#">分类</a></li> -->
-          <!-- </ul>
-        </div>  -->
-        <!-- 主要类型 -->
-        <!-- <div class="dropdown btn-group clearfix"> -->
-          <!-- 选单按钮 -->
-          <!-- <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-          类型二 <i class="fa fa-angle-down"></i>
-          </button> -->
-          <!-- 选单内容：分类 -->
-          <!-- <ul class="dropdown-menu">
-            <li><a href="#">分类</a></li>
-            <li><a href="#">分类</a></li>
-            <li><a href="#">分类</a></li>
-          </ul>
-        </div> -->
-        <!-- 主要类型 -->
-        <!-- <div class="dropdown btn-group clearfix">
-          <!-- 选单按钮 -->
-          <!-- <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-          类型三 <i class="fa fa-angle-down"></i>
-          </button> -->
-          <!-- 选单内容：分类 -->
-          <!-- <ul class="dropdown-menu">
-            <li><a href="#">分类</a></li>
-            <li><a href="#">分类</a></li>
-            <li><a href="#">分类</a></li>
-          </ul> -->
-        <!-- </div> -->
-        <!-- 品牌 -->
-        <!-- <div class="dropdown btn-group clearfix"> -->
-          <!-- 选单按钮 -->
-          <!-- <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-          品牌<i class="fa fa-angle-down"></i>
-          </button> -->
-          <!-- 选单内容：品牌 -->
-          <!-- <ul class="dropdown-menu">
-            <li><a href="#">品牌</a></li>
-            <li><a href="#">品牌</a></li>
-            <li><a href="#">品牌</a></li>
-          </ul>
         </div>
       </div>
-    </section> -->
-
-    <!-- <hr/> -->
-
-    <!--===== 页面路径 & 排序 =====-->
-    <!-- <section class="path-sort-box">
-      <!--=== 产品页面路径 ===-->
-      <!-- <div class="left-box">
-        <a href="#">JDStore</a>
-      </div> -->
-      <!--=== 选单按钮 ===-->
-      <!-- <div class="right-box">
-        <div class="dropdown btn-group clearfix">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            預設排序 <span class="caret"></span>
-          </button> -->
-          <!-- 选单内容：排序方式 -->
-          <!-- <ul class="dropdown-menu dropdown-menu-right" selection aria-labelledby="dropdownMenuDivider">
-            <li><a href="#">依热销度</a></li>
-            <li><a href="#">依上架时间</a></li>
-            <li><a href="#">依价格排序：低至高</a></li>
-            <li><a href="#">依价格排序：高至低</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <hr/> -->
-
-    <!--===== 商品列表 =====-->
-    <!-- <section class="product-items-box">
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %> <!-- 商品连结 -->
-            <!-- <div class="box"><%= image_tag("item_1.jpg") %></div> <!-- 商品图片 -->
-            <!-- <div class="product-info">
-              <p>两手锅</p> <!-- 商品名称 -->
-              <!-- <p>$550</p> <!-- 商品价格 -->
-            <!-- </div>
-          <% end %>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_2.jpg") %></div>
-            <div class="product-info">
-              <p>平底锅</p>
-              <p>$750</p>
-            </div>
-          <% end %> -->
-        <!-- </div>
-        <div class="col-xs-12 col-sm-4 col-md-3"> -->
-          <!-- <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_3.jpg") %></div>
-            <div class="product-info">
-              <p>铁制茶壶</p>
-              <p>$450</p>
-            </div>
-          <% end %>
-        </div> -->
-        <!-- <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_4.jpg") %></div>
-            <div class="product-info">
-              <p>茶壶</p>
-              <p>$250</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_5.jpg") %></div>
-            <div class="product-info">
-              <p>八角点心盘</p>
-              <p>$150</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_6.jpg") %></div>
-            <div class="product-info">
-              <p>点心盘</p>
-              <p>$80</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_7.jpg") %></div>
-            <div class="product-info">
-              <p>木盘</p>
-              <p>$125</p>
-            </div>
-          <% end %>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <%= link_to posts_path do %>
-            <div class="box"><%= image_tag("item_8.jpg") %></div>
-            <div class="product-info">
-              <p>酱料碟</p>
-              <p>$20</p>
-            </div>
-          <% end %>
-        </div>
-    </section> -->
+    </div>
   </div>
-</div>
+  <!---->
+</main>
