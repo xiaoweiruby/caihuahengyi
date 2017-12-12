@@ -8,6 +8,91 @@
 }
 
 .thumbnail{
-  height: 200px;
-  width:300px;
+  height: 100px;
+  width:150px;
+}
+
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px
+}
+
+.main-container>.view[data-v-3f216172] {
+    margin-top: 1.767rem
+}
+
+.main-container.with-view-nav>.view[data-v-3f216172] {
+    margin-top: 5.6rem
+}
+
+.main-container.tight>.view[data-v-3f216172] {
+    margin-top: 0
+}
+
+.main-container.tight.with-view-nav>.view[data-v-3f216172] {
+    margin-top: 3.833rem
+}
+
+.books-index-view[data-v-5132bae5] {
+    margin-top: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.books-index-view .books-solgan[data-v-5132bae5] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center
+}
+
+.books-index-view .books-solgan[data-v-5132bae5] {
+    font-size: 20px;
+    color: #007fff;
+    margin-bottom: 15px
+}
+
+.books-index-view .books-solgan .desc[data-v-5132bae5] {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.7
+}
+
+
+.list-wrap[data-v-5132bae5] {
+    min-height: calc(100vh - 340px);
+    margin-bottom: 50px
+}
+
+.books-list[data-v-5132bae5] {
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(4,5,13,.23)
+}
+
+@media (max-width: 700px) {
+    .books-container[data-v-5132bae5] {
+        background-image:url(//gold-cdn.xitu.io/v3/static/img/slogan-bg--mobile.92c4195.png);
+        background-size: contain;
+        background-position: 0 60px
+    }
+
+    .books-index-view .books-solgan[data-v-5132bae5] {
+        max-width: 100%;
+        padding: 35px;
+        box-sizing: border-box
+    }
+
+    .books-index-view .books-solgan .desc[data-v-5132bae5] {
+        font-size: 13px
+    }
 }
