@@ -26,9 +26,6 @@ class PostlistsController < ApplicationController
     @postlists = @post.postlists
   end
 
-
-
-
   private
   def postlist_params
     params.require(:postlist).permit(:title, :body)
