@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :cart_items
+  resources :cart_items, :qas, :employments
 
   resources :carts do
      collection do
