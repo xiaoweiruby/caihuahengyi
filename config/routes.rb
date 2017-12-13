@@ -9,6 +9,7 @@ Rails.application.routes.draw do
      end
   end
   resources :posts do
+    resources :postlists
     resources :comments
     member do
        post :add_to_cart

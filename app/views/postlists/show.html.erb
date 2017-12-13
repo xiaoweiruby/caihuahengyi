@@ -1,0 +1,19 @@
+<%= link_to("写文章", new_post_postlist_path(@post), class: "btn btn-default pull-right")%>
+
+  <table class="table">
+     <thead>
+      <tr>
+         <th>文章标题</th>
+         <th>文章内容</th>
+
+       </tr>
+     </thead>
+     <tbody>
+       <% @postlists.each do |postlist| %>
+         <tr>
+           <td><%= postlist.title %></td>
+           <td><%= postlist.body %></td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>

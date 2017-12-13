@@ -1,0 +1,2 @@
+module PostlistsHelper
+end
