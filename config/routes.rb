@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :cart_items
+  resources :cart_items, :qas, :employments, :activities
 
   resources :carts do
      collection do
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
      end
   end
   resources :posts do
+    resources :postlists
     resources :comments
     member do
        post :add_to_cart
