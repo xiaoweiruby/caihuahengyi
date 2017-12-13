@@ -15,7 +15,7 @@ class PostlistsController < ApplicationController
     @postlist.post = @post
     @postlist.user = current_user
     if @postlist.save
-      redirect_to post_postlist_path(@post)
+      redirect_to post_path(@post)
     else
       render :new
     end
@@ -29,7 +29,5 @@ class PostlistsController < ApplicationController
   private
   def postlist_params
     params.require(:postlist).permit(:title, :body)
-
-
   end
 end
