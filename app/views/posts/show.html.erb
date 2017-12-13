@@ -1,37 +1,48 @@
-<div class="product-show-box">
-  <div class="container">
-  <div class="col-md-12">
-    <% if @post.image.present? %>
-      <%= image_tag(@post.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
+<main data-v-3f216172="" class="container main-container">
+  <div data-v-5132bae5="" data-v-3f216172="" class="books-index-view">
+    <div data-v-5132bae5="" data-v-3f216172="" class="books-solgan">
+    </div>
+    <div data-v-5132bae5="" data-v-3f216172="" class="list-wrap">
+      <div data-v-5132bae5="" data-v-3f216172="" class="books-list">
+        <div class="product-show-box">
+          <div class="container">
+          <div class="col-md-12">
+            <% if @post.image.present? %>
+              <%= image_tag(@post.image.medium.url, class: "thumbnail") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+            <% end %>
 
-    <h2><%= @post.information %></h2>
-    <% if current_user && current_user.vip? %>
-    <p><%= @post.information %></p>
-    <p><%= @post.body %></p>
+            <h2><%= @post.information %></h2>
+            <% if current_user && current_user.vip? %>
+            <p><%= @post.information %></p>
+            <p><%= @post.body %></p>
 
-      <h4>评论精选</h4>
-      <% @post.comments.each do |comment| %>
-        <p>
-          <strong>我的评论:</strong>
-          <%= comment.body %>
-        </p>
-      <% end %>
-      <h6>我来说几句:</h6>
-      <%= form_for([@post, @post.comments.build]) do |f| %>
-        <p>
-          <%= f.text_area :body %>
-        </p>
-        <p>
-          <%= f.submit %>
-        </p>
-      <% end %>
+              <h4>评论精选</h4>
+              <% @post.comments.each do |comment| %>
+                <p>
+                  <strong>我的评论:</strong>
+                  <%= comment.body %>
+                </p>
+              <% end %>
+              <h6>我来说几句:</h6>
+              <%= form_for([@post, @post.comments.build]) do |f| %>
+                <p>
+                  <%= f.text_area :body %>
+                </p>
+                <p>
+                  <%= f.submit %>
+                </p>
+              <% end %>
 
-    <% else %>
-      <p>请开通会员</p>
-    <% end %>
+            <% else %>
+              <p>请开通会员</p>
+            <% end %>
+          </div>
+        </div>
+        </div>
+     </div>
+    </div>
   </div>
-</div>
-</div>
+<!---->
+</main>
