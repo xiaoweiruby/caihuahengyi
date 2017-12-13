@@ -34,6 +34,7 @@ gem 'simple_form'
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem "seo_helper"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
