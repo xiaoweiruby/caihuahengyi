@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @postlists = @post.postlists
     set_page_title @post.title
-    page_description = view_context.truncate(@post.description, :length => 100)
+    page_description = view_context.truncate(@post.body, :length => 100)
   end
   def new
     @post = Post.new
