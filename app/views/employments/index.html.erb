@@ -1,5 +1,41 @@
 <br>
 <br>
 <br>
+<div class="col-md-12">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>序号</td>
+        <td>书名</td>
+        <td>图片</td>
+        <td>阅读笔记</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @employments.each do |employment| %>
+      <tr>
+        <td>#</td>
+        <td><%= link_to(employment.title, employment_path(employment)) %></td>
+        <td><%= employment.body %></td>
+        <td>
+          <%= link_to("Edit", edit_employment_path(employment), class: "btn btn-sm btn-default")%>
+          <%= link_to("Delete", employment_path(employment),    class: "btn btn-sm btn-default",
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="employment">
+    <%= link_to("新增书籍", new_employment_path, class: "btn btn-default") %>
+  </div>
+</div>
+
 <br>
-<h1 class="text-center">就业页面建设中。。。</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
