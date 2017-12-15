@@ -24,9 +24,7 @@ class PostlistsController < ApplicationController
   def show
     @post = Post.find(params[:post_id])
     @postlists = @post.postlists
-    @postlist = @post.postlist
-    set_page_title @postlist.title
-    page_description = view_context.truncate(@postlist.description, :length => 100)
+
   end
 
   private
