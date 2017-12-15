@@ -99,3 +99,12 @@
 ---
 ## 2017年12月13日 杨吉堂
 - 更改posts／show布局、 更改logo
+
+
+## 2017年12月14日 杨吉堂
+- 更改posts／show布局、 更改logo
+
+
+---
+## 2017年12月15日
+- 增加emloyments/index.htmt里图标栏位
