@@ -1,0 +1,27 @@
+<div class="conent-box">
+  <div class="container">
+          <div class="col-md-4 col-md-offset-4">
+              <h2>编辑文章</h2>
+
+              <hr>
+              <%= simple_form_for @employment do |f| %>
+
+              <br>
+              <div class="group">
+                <%= f.input :title, :label => "标题"%>
+              </div>
+              <br>
+
+
+              <div class="group">
+                <%= f.input :body,:label => "产品内容" %>
+              </div>
+
+
+              <%= f.submit "更新", :disable_with => 'Submitting...' %>
+              <% end %>
+
+
+          </div>
+    </div>
+  </div>
