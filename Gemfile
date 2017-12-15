@@ -47,6 +47,7 @@ gem 'font-awesome-rails'
 gem 'ransack'
 gem 'pg'
 group :development, :test do
+  gem "rails-erd"
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
