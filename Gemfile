@@ -47,7 +47,7 @@ gem 'font-awesome-rails'
 gem 'ransack'
 gem 'pg'
 group :development, :test do
-  gem "rails-erd"
+
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,6 +55,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "rails-erd"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
