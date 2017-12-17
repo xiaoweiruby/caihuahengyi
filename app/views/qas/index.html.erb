@@ -3,3 +3,17 @@
 <br>
 <br>
 <h1 class="text-center">问答页面建设中。。。</h1>
+<table class="table table-hover">
+  <thead>
+      <tr>
+        <td>书名</td>
+        <td>内容</td>
+      </tr>
+  </thead>
+  <tbody>
+    <% @qas.each do |qa| %>
+    <link_to qa.title >
+    <link_to qa.body >
+    <% end %>
+  </tbody>
+</table>
