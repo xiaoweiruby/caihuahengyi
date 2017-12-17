@@ -6,7 +6,7 @@ class QasController < ApplicationController
     @qa = Qa.new
   end
   def create
-    @qa.new(qa_params)
+    @qa = Qa.new(qa_params)
     if @qa.save
       redirect_to qas_path
     else

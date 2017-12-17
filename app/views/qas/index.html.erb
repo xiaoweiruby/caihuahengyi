@@ -2,7 +2,7 @@
 <br>
 <br>
 <br>
-<h1 class="text-center">问答页面建设中。。。</h1>
+<h1 class="text-center">问答页面</h1>
 <table class="table table-hover">
   <thead>
       <tr>
@@ -11,9 +11,11 @@
       </tr>
   </thead>
   <tbody>
+    <tr>
     <% @qas.each do |qa| %>
-    <link_to qa.title >
-    <link_to qa.body >
+    <td><%= link_to qa.title, qa_path(qa) %></td>
+    <td><%= link_to qa.body %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
