@@ -1,5 +1,32 @@
 <br>
 <br>
-<br>
-<br>
-<h1 class="text-center">活动页面建设中。。。</h1>
+<h1 class="text-center">活动页面建设..</h1>
+<div class="col-md-12">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>标题</td>
+        <td>内容</td>
+      </tr>
+    </thead>
+    <tbody>
+      <div class="activity">
+        <% @activities.each do |activity|%>
+          <tr>
+            <td><%= link_to(activity.title, activity_path(activity))%></td>
+            <td><%= link_to(activity.body) %></td>
+            <td><%= link_to("编辑", edit_activity_path(activity))%></td>
+            <td><%= link_to("删除", activity_path(activity), method: :delete, data: { confirm: "Are you sure?"}) %></td>
+          </tr>
+        <% end %>
+        <%= link_to("新增活动", new_activity_path, class: "btn btn-default") %>
+      </div>
+    </tbody>
+
+  </table>
+</div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
