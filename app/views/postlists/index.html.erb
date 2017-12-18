@@ -9,8 +9,8 @@
   <table class="table">
      <thead>
       <tr>
-         <th>文章标题</th>
-         <th>文章内容</th>
+         <td>文章标题</td>
+         <td>文章内容</td>
        </tr>
      </thead>
      <tbody>
@@ -18,10 +18,10 @@
          <tr>
            <td><%= postlist.title %></td>
            <td><%= postlist.body %></td>
-           <td><%= link_to("编辑", edit_post_postlist_path(postlist))%></td>
-           <td><%= link_to("删除", post_postlist_path, method: :delete)%></td>
+           <td><%= link_to("编辑", edit_post_postlist_path(@post,postlist))%></td>
+           <td><%= link_to("删除", post_postlist_path(@post,postlist))%></td>
+
          </tr>
-         <%link_to("新增", new_post_postlist_path)%>
        <% end %>
      </tbody>
    </table>
