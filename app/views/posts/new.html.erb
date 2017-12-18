@@ -5,20 +5,20 @@
 
               <hr>
               <%= simple_form_for @post do |f| %>
-              <div class="group">
+              <div class="post">
                 <%= f.input :image, as: :file %>
               </div>
 
               <br>
-              <div class="group">
+              <div class="post">
                 <%= f.input :title, :label => "标题"%>
               </div>
               <br>
-              <div class="group">
+              <div class="post">
                 <%= f.input :information, :label => "产品介绍"%>
               </div>
               <br>
-              <div class="group">
+              <div class="post">
                 <%= f.input :body,:label => "产品内容" %>
               </div>
 
