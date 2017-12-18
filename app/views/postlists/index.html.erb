@@ -19,8 +19,7 @@
            <td><%= postlist.title %></td>
            <td><%= postlist.body %></td>
            <td><%= link_to("编辑", edit_post_postlist_path(@post,postlist))%></td>
-           <td><%= link_to("删除", post_postlist_path(@post,postlist))%></td>
-
+           <td><%= link_to("删除", post_postlist_path(@post,postlist), method: :delete)%></td>
          </tr>
        <% end %>
      </tbody>

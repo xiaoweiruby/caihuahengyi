@@ -117,4 +117,9 @@
 - 实作就业crud  ✓
 - 实作活动crud ✓
 - 解决学习栏位的bug重新部署 ✓
-- 分析postlists#destroy 要两次才能删除的原因 未找到
+- 解决postlists#destroy bug 要两次才能删除的原因 是views里面没加 method：：delete 方法
+---
+## 2017年12月18日 杨吉堂
+- 修改footer
+- posts／index增加招聘链接
+- 首页增加栏位，更换照片
