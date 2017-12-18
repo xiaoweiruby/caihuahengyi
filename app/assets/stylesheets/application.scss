@@ -208,33 +208,353 @@
 }
 
 
-/*===== Footer 页脚 ======*/
-.footer{
-  text-align: center;
-  min-height: 175px; //最小高度
-  background-color: #222;
-  padding: 15px 0;
-  color: #fff;
 
-  /* 标题 */
-  h4 {
-    font-size: 16px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
+// /*===== Footer 页脚 ======*/
+footer {
+    width: 100%;
+    padding: 20px 40px;
+    margin: 0 auto;
+    clear: both;
+    color: #f9f9f9;
+    font-size: 12px;
+    background-color: #222;
+    margin-top: 100px
+}
 
-  /* 连结 */
-  a {
-    text-decoration:none;
-    color: #ddd;
-  }
+footer a {
+    color: inherit;
+    text-decoration: none;
+    outline: 0
+}
 
-  /* 连结-鼠标效果 */
-  a:hover,
-  a:active,
-  a:focus {
-    color: #0070DE;
-  }
+footer a:hover {
+    text-decoration: underline
+}
+
+footer .footer-left {
+    float: left
+}
+
+footer .footer-right {
+    float: right
+}
+
+footer .footer-right .sns-icons .weibo {
+    background-position: 0 -16px
+}
+
+footer .footer-right .sns-icons .weibo:hover {
+    background-position: 0 0
+}
+
+footer .footer-right .sns-icons .weixin {
+    background-position: 0 -48px
+}
+
+footer .footer-right .sns-icons .weixin:hover {
+    background-position: 0 -32px
+}
+
+footer .footer-fluid {
+    margin-bottom: 32px
+}
+
+footer .fluid-title {
+    font-size: 14px;
+    color: #c99a05;
+    margin-bottom: 10px;
+    letter-spacing: 10px
+}
+
+footer .fluid-content {
+    max-width: 342px
+}
+
+footer .tuchong-desc {
+    margin-right: 70px;
+    line-height: 1.67
+}
+
+footer .app-link {
+    padding: 6px 24px;
+    border: 1px solid #f9f9f9;
+    margin-bottom: 10px;
+    display: block
+}
+
+footer .app-link:last-child {
+    margin-bottom: 0
+}
+
+footer .qrcode {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin-right: 10px
+}
+
+footer .qrcode.wechat {
+    background-image: url('https://ww4.sinaimg.cn/large/006tNc79ly1fmkvt4tatuj3076076q3f.jpg');
+    position: absolute;
+    top: 0;
+    left: -90px;
+    display: none
+}
+
+footer .qrcode-parallel {
+    display: inline-block;
+    vertical-align: middle
+}
+
+footer .link-logo {
+    margin-right: 5px;
+    position: relative;
+    display: inline-block
+}
+
+footer .link-logo:last-child {
+    margin-right: 0
+}
+
+footer .link-logo.wechat:hover .qrcode {
+    display: block
+}
+
+footer .tuchong-detail {
+    color: #85888a
+}
+
+footer .tuchong-detail a:hover {
+    text-decoration: none
+}
+
+footer .tuchong-detail a:hover i {
+    text-decoration: underline
+}
+
+footer .slash-list {
+    display: inline-block;
+    margin-left: 10px
+}
+
+footer .slash-list .slash-item:before {
+    color: #85888a;
+    text-decoration: none
+}
+
+.over-auto {
+    overflow: auto
+}
+.fl {
+    float: left
+}
+.text-center {
+    text-align: center
+}
+.fr {
+    float: right
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.slash-list .slash-item:before {
+    content: '/';
+    color: #E0E0E0;
+    font-size: 12px;
+    margin: 0 10px
+}
+
+
+
+@font-face {
+    font-family: icomoon;
+    src: url(//static.tuchong.net/styles/fonts/pc/icomoon.eot?3lzr3);
+    src: url(//static.tuchong.net/styles/fonts/pc/icomoon.eot?3lzr3#iefix) format('embedded-opentype'),url(//static.tuchong.net/styles/fonts/pc/icomoon.ttf?3lzr3) format('truetype'),url(//static.tuchong.net/styles/fonts/pc/icomoon.woff?3lzr3) format('woff'),url(//static.tuchong.net/styles/fonts/pc/icomoon.svg?3lzr3#icomoon) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+[class^=icon-],[class*=" icon-"] {
+    font-family: icomoon!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+[class^=icon-]:before,[class*=" icon-"]:before {
+    font-size: 32px
+}
+
+.icon-exit-fullscreen:before {
+    content: "\e901"
+}
+
+.icon-get:before {
+    content: "\e902"
+}
+
+.icon-arrow:before {
+    content: "\e903"
+}
+
+.icon-close:before {
+    content: "\e904"
+}
+
+.icon-comment:before {
+    content: "\e905"
+}
+
+.icon-end:before {
+    content: "\e906"
+}
+
+.icon-fullscreen:before {
+    content: "\e907"
+}
+
+.icon-like:before {
+    content: "\e908"
+}
+
+.icon-search:before {
+    content: "\e909"
+}
+
+.icon-share:before {
+    content: "\e90a"
+}
+
+.icon-wechat:before {
+    content: "\e90b"
+}
+
+.icon-weibo:before {
+    content: "\e90c"
+}
+
+.icon-message:before {
+    content: "\e90d"
+}
+
+.icon-more:before {
+    content: "\e90e"
+}
+
+.icon-unorderlist:before {
+    content: "\e90f"
+}
+
+.icon-image:before {
+    content: "\e910"
+}
+
+.icon-indent:before {
+    content: "\e911"
+}
+
+.icon-orderlist:before {
+    content: "\e912"
+}
+
+.icon-underline:before {
+    content: "\e913"
+}
+
+.icon-add:before {
+    content: "\e914"
+}
+
+.icon-bold:before {
+    content: "\e915"
+}
+
+.icon-clear:before {
+    content: "\e916"
+}
+
+.icon-italic:before {
+    content: "\e917"
+}
+
+.icon-link:before {
+    content: "\e918"
+}
+
+.icon-quote:before {
+    content: "\e919"
+}
+
+.icon-place:before {
+    content: "\e91a"
+}
+
+.icon-gotop:before {
+    content: "\e91b"
+}
+
+.icon-download:before {
+    content: "\e91c"
+}
+
+.icon-2arrow:before {
+    content: "\e91d"
+}
+
+.icon-edit:before {
+    content: "\e91f"
+}
+
+.icon-edit2:before {
+    content: "\e91e"
+}
+
+.icon-approve:before {
+    content: "\e900"
+}
+
+.icon-go:before {
+    content: "\e920"
+}
+
+.icon-nike:before {
+    content: "\e921"
+}
+
+.icon-like.liked {
+    color: #e60905!important
+}
+
+.icon-like.liked:before {
+    color: #e60905!important
+}
+
+.icon-next {
+    display: inline-block;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.icon-next:after {
+    content: "\e903"
 }
 
 
