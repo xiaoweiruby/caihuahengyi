@@ -12,6 +12,7 @@
   </thead>
   <tbody>
     <tr>
+    <%= link_to("新增问答", new_qa_path, class: "btn btn-sm btn-default")%>
     <% @qas.each do |qa| %>
     <td><%= link_to qa.title, qa_path(qa) %></td>
     <td><%= link_to qa.body %></td>
