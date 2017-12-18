@@ -113,6 +113,11 @@
 - 增加emloyment crud
 - 解决首页图片显示的bug
 
+##2017年12月18号 张家琛
+- 实作就业crud  ✓
+- 实作活动crud ✓
+- 解决学习栏位的bug重新部署 ✓
+- 解决postlists#destroy bug 要两次才能删除的原因 是views里面没加 method：：delete 方法
 ---
 ## 2017年12月18日 杨吉堂
 - 修改footer
