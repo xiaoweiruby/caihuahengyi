@@ -25,6 +25,13 @@ class PostlistsController < ApplicationController
     @post = Post.find(params[:post_id])
     @postlists = @post.postlists
   end
+  def destroy
+    @post = Post.find(params[:post_id])
+    @postlist = @post.postlist
+    @postlist.destroy
+    redirect_to post_path(@post)
+
+  end
 
   private
   def postlist_params
