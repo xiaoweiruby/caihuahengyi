@@ -20,6 +20,23 @@ class QasController < ApplicationController
     @qa = Qa.find(params[:id])
 
   end
+  def update
+    @qa = Qa.find(params[:id])
+    if @qa.update(qa_params)
+      redirect_to qas_path
+    else
+      render :edit
+
+    end
+
+  end
+  def destroy
+    @qa = Qa.find(params[:id])
+
+    @qa.destroy
+    redirect_to qas_path
+
+  end
 
   private
   def qa_params
