@@ -5,11 +5,8 @@ class PostsController < ApplicationController
 
   end
   def show
-
     @post = Post.find(params[:id])
     @postlists = @post.postlists
-    set_page_title @post.title
-    page_description = view_context.truncate(@post.description, :length => 100)
   end
   def new
     @post = Post.new
@@ -37,7 +34,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-  
+
     @post.destroy
     redirect_to posts_path
   end
