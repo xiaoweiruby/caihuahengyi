@@ -120,6 +120,10 @@
 - 解决postlists#destroy bug 要两次才能删除的原因 是views里面没加 method：：delete 方法
 ---
 ## 2017年12月18日 杨吉堂
-- 修改footer
+- 修改footer链接
 - posts／index增加招聘链接
 - 首页增加栏位，更换照片
+
+## 2017年12月19日 杨吉堂
+- 修改footer链接
+- activities/index 增加条幅
