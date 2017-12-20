@@ -1,24 +1,34 @@
 <div class="conent-box">
   <div class="container">
+
+    <!--===== 广告图 =====-->
+    <section class="intro-box">
+      <div class="row">
+        <div class="col-md-12">
+           <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fmm29t61ztj30zk08c0zm.jpg" alt="Activities index intro">
+        </div>
+      </div>
+    </section>
+
           <div class="col-md-4 col-md-offset-4">
-              <h2>新增文章</h2>
+              <h3>新增单位</h3>
 
               <hr>
               <%= simple_form_for @employment do |f| %>
 
               <br>
               <div class="employment">
-                <%= f.input :title, :label => "标题"%>
+                <%= f.input :title, :label => "单位名称"%>
               </div>
               <br>
 
 
               <div class="employment">
-                <%= f.input :body,:label => "产品内容" %>
+                <%= f.input :body,:label => "单位介绍" %>
               </div>
 
 
-              <%= f.submit "发表", :disable_with => 'Submitting...' %>
+              <%= f.submit "提交单位", :disable_with => 'Submitting...' %>
               <% end %>
 
 
