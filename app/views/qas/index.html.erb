@@ -1,27 +1,36 @@
-<br>
-<br>
-<br>
-<br>
-<h1 class="text-center">问答页面</h1>
+<div class="product-show-box">
+  <div class="container">
+<!--===== 广告图 =====-->
+<section class="intro-box">
+  <div class="row">
+    <div class="col-md-12">
+       <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fmm29t61ztj30zk08c0zm.jpg" alt="Activities index intro">
+    </div>
+  </div>
+</section>
+
+<h1 class="text-center">职场问答</h1>
 <table class="table table-hover">
   <thead>
       <tr>
-        <td>书名</td>
-        <td>内容</td>
+        <td>职场问题</td>
       </tr>
   </thead>
   <tbody>
     <tr>
-    <%= link_to("新增问答", new_qa_path, class: "btn btn-sm btn-default")%>
+
     <% @qas.each do |qa| %>
     <td><%= link_to qa.title, qa_path(qa) %></td>
-    <td><%= link_to qa.body %></td>
 
 
-    <td><%= link_to("Edit", edit_qa_path(qa), class: "btn btn-sm btn-default")%></td>
-    <td><%= link_to("Delete", qa_path(qa),    class: "btn btn-sm btn-default",
+
+    <td><%= link_to("编辑", edit_qa_path(qa), class: "btn btn-sm btn-default")%></td>
+    <td><%= link_to("删除", qa_path(qa),    class: "btn btn-sm btn-default",
                     method: :delete, data: { confirm: "Are you sure?" } )%></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+   <%= link_to("职场提问", new_qa_path, class: "btn btn-sm btn-default pull-right")%>
+ </div>
+</div>

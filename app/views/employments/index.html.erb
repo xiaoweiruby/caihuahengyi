@@ -1,6 +1,16 @@
+<div class="product-show-box">
+  <div class="container">
+<!--===== 广告图 =====-->
+<section class="intro-box">
+  <div class="row">
+    <div class="col-md-12">
+       <img src="https://ww2.sinaimg.cn/large/006tNc79ly1fmm29t61ztj30zk08c0zm.jpg" alt="Activities index intro">
+    </div>
+  </div>
+</section>
 
 <div class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2>
+  <h2>推荐就业</h2>
   <div class="row text-center">
     <div class="col-sm-3">
       <div class="thumbnail">
@@ -35,12 +45,13 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <td>序号</td>
-        <td>书名</td>
-        <td>图片</td>
-        <td>阅读笔记</td>
+        <td>公司序号</td>
+        <td>公司名称</td>
+        <td>公司简介</td>
       </tr>
     </thead>
+
+
     <tbody>
       <% @employments.each do |employment| %>
       <tr>
@@ -58,14 +69,9 @@
   </table>
 
   <div class="employment">
-    <%= link_to("新增书籍", new_employment_path, class: "btn btn-default") %>
+    <%= link_to("新增单位", new_employment_path, class: "btn btn-default pull-right") %>
   </div>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  </div>
+</div>
