@@ -1,4 +1,5 @@
 class QasController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   def index
     @qas = Qa.all
   end

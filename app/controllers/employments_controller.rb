@@ -1,4 +1,5 @@
 class EmploymentsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   def index
     @employments = Employment.all
   end

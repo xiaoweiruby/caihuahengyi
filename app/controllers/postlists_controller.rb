@@ -1,4 +1,5 @@
 class PostlistsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   def index
     @post = Post.find(params[:post_id])
     @postlists = @post.postlists
