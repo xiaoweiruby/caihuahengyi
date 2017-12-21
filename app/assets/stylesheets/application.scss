@@ -176,6 +176,36 @@
   }
 }
 
+/*===== Intro 首页-广告轮播 =====*/
+.intro-box {
+  /*===== 轮播内容 =====*/
+  .item {
+    /* 标题 */
+    h3 {
+      margin-top: -40%; //标题高度
+      font-size: 50px; //文字大小
+      letter-spacing: 5px; //文字间距
+    }
+
+    /* 内文 */
+    p {
+      font-size: 20px;
+    }
+
+    /* 图片 */
+    img {
+      width: 100%;
+    }
+  }
+
+  /*===== 换页按钮 =====*/
+  .carousel-control {
+    span {
+      margin-top: 145%; //按钮高度
+      font-size: 50px; //按钮大小
+    }
+  }
+}
 
 /*===== Show 首页-推荐商品 =====*/
 .show-box {
