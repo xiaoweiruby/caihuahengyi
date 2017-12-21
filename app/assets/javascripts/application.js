@@ -23,3 +23,8 @@ $(window).scroll(function () {
 		$('#navbar').removeClass('scroll_navbar') //navbar 移除 scroll_navbar CSS
 	}
 })
+$(document).ready(function() {
+    $('.carousel').carousel({
+     interval: 2000
+    })
+	});
