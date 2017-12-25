@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-wysihtml5
 //= require bootstrap
 //= require_tree .
 /*===== 首页导览列变化特效 =====*/

@@ -10,14 +10,15 @@
     <meta name="keywords" content="才华横溢 终身学习 求职就业 线下活动" />
     <meta http-equiv="Window-target" content="_top" />
     <link rel=”shortcut icon” type=”image/x-icon” href="https://ws4.sinaimg.cn/large/006tNc79ly1fmdsv33859j30o60lw412.jpg" />
-
-
+    <%= csrf_meta_tags %>
+      <!-- <%= render_page_title_tag %> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <body>
+      <div>
             <%= render "common/navbar" %>
               <%= yield %>
         </div>

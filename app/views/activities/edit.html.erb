@@ -2,7 +2,7 @@
   <h2>编辑文章</h2>
   <%= simple_form_for @activity do |f|%>
   <%= f.input :title, label: "标题" %>
-  <%= f.input :body, label: "内容"%>
+  <%= f.input :body, as: :wysihtml5,label: "内容"%>
   <%= f.submit "发表", disable_with: "submitting..." %>
   <% end %>
 </div>
