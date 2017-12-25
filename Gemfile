@@ -37,6 +37,7 @@ gem 'mini_magick'
 gem "seo_helper"
 gem 'pry'
 gem 'pry-rails'
+gem 'bootstrap-wysihtml5-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
