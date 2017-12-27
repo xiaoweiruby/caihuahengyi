@@ -1,3 +1,127 @@
 // Place all the styles related to the activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.events-list[data-v-405614c3] {
+    margin-top: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    margin-left: -7px;
+    margin-right: -7px
+}
+
+.events[data-v-405614c3] {
+    cursor: pointer;
+    width: 25%;
+    padding-left: 7px;
+    padding-right: 7px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 30px
+}
+
+.events[data-v-405614c3],.events[data-v-405614c3]:before {
+    transition: all .2s linear
+}
+
+.events[data-v-405614c3]:before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.15)
+}
+
+.events[data-v-405614c3]:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px)
+}
+
+.events[data-v-405614c3]:hover:before {
+    box-shadow: 0 7px 15px rgba(0,0,0,.1)
+}
+
+.events .events-inner[data-v-405614c3] {
+    border-radius: 2px;
+    overflow: hidden;
+    color: #333
+}
+
+.events .events-inner .banner[data-v-405614c3] {
+    padding-top: 58.82%;
+    background-color: #ccc
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #909090
+}
+
+a:hover {
+    color: #007fff
+}
+
+
+.message[data-v-405614c3] {
+    padding: 20px 15px 15px
+}
+
+.message span[data-v-405614c3] {
+    vertical-align: middle
+}
+
+.message .icon[data-v-405614c3] {
+    margin-right: 5px;
+    color: #888;
+    font-size: 16px
+}
+
+.message .title[data-v-405614c3] {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.message .date[data-v-405614c3] {
+    margin-top: 6px
+}
+
+.message .bottom[data-v-405614c3] {
+    margin-top: 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.message .bottom .btn-join[data-v-405614c3] {
+    width: 100px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: #D90000;
+    line-height: 25px;
+    color: #fff;
+    text-align: center
+}
