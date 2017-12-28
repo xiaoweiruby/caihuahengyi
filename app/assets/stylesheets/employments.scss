@@ -12,3 +12,201 @@
 .thumbnail img {
     margin-bottom: 10px;
 }
+
+
+
+
+
+
+#company_list {
+    padding-top: 4px
+}
+
+#company_list ul.item_con_list {
+    width: 1216px;
+    zoom:1}
+
+#company_list ul.item_con_list:before,#company_list ul.item_con_list:after {
+    content: "";
+    display: table
+}
+
+#company_list ul.item_con_list:after {
+    clear: both
+}
+
+#company_list ul.item_con_list li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 288px;
+    height: 270px;
+    margin-top: 16px;
+    margin-right: 16px;
+    border: 1px solid #EEE
+}
+
+#company_list ul.item_con_list li:hover {
+    -webkit-box-shadow: 0 0 10px 0 rgba(56,81,76,.12);
+    -moz-box-shadow: 0 0 10px 0 rgba(56,81,76,.12);
+    box-shadow: 0 0 10px 0 rgba(56,81,76,.12)
+}
+
+#company_list ul.item_con_list li .wordCut {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal
+}
+
+#company_list ul.item_con_list li .green {
+    color: #00b38a
+}
+
+#company_list ul.item_con_list li .top {
+    margin: 0 13px;
+    padding: 20px 0 14px;
+    text-align: center;
+}
+
+#company_list ul.item_con_list li .top p {
+    line-height: 22px
+}
+
+#company_list ul.item_con_list li .top .company-name {
+    margin-top: 13px;
+    font-size: 16px;
+    color: #333
+}
+
+#company_list ul.item_con_list li .top .indus-stage {
+    margin-top: 3px;
+    color: #999
+}
+
+#company_list ul.item_con_list li .top .advantage {
+    margin-top: 5px;
+    color: #555
+}
+
+#company_list ul.item_con_list li .bottom .bottom-item {
+    position: relative;
+    display: block;
+    margin-top: 17px;
+    text-align: center
+}
+
+#company_list ul.item_con_list li .bottom .bottom-item.bottom-1:after,#company_list ul.item_con_list li .bottom .bottom-item.bottom-2:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    height: 30px;
+    width: 1px;
+    background: #EDEDED
+}
+
+#company_list ul.item_con_list li .bottom .bottom-item:hover {
+    color: #00b38a
+}
+
+#company_list ul.item_con_list li .bottom .bottom-item:hover p.gray {
+    color: #00b38a
+}
+
+#company_list ul.item_con_list li .bottom .bottom-item p {
+    line-height: 1
+}
+
+#company_list ul.item_con_list li .bottom .bottom-item p.gray {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #999
+}
+
+#company_list ul.item_con_list li .bottom .bottom-1 {
+    width: 90px
+}
+
+#company_list ul.item_con_list li .bottom .bottom-2 {
+    width: 90px
+}
+
+#company_list ul.item_con_list li .bottom .bottom-3 {
+    width: 104px;
+    border-right: 0
+}
+
+#company_list .empty_position {
+    width: 530px;
+    margin: 115px auto 140px;
+    zoom:1}
+
+#company_list .empty_position:before,#company_list .empty_position:after {
+    content: "";
+    display: table
+}
+
+#company_list .empty_position:after {
+    clear: both
+}
+
+#company_list .empty_position .pic {
+    float: left;
+    width: 130px;
+    height: 150px;
+    background: url(//www.lgstatic.com/www/static/company-list/modules/common/img/icons_6084500.png) no-repeat -10px -30px
+}
+
+#company_list .empty_position .txt {
+    margin-top: 75px;
+    float: left;
+    margin-left: 45px
+}
+
+#company_list .empty_position .txt div {
+    font-size: 22px;
+    margin-bottom: 20px
+}
+
+#company_list .empty_position .txt span {
+    font-size: 16px;
+    color: #999
+}
+
+#company_list .item_con_pager {
+    margin: 35px 0;
+    text-align: center
+}
+
+
+* {
+    outline: 0
+}
+ul,ol {
+    margin: 0;
+    padding-right:10px;
+    list-style: none
+}
+
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearfix {
+    *zoom:1}
+
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
